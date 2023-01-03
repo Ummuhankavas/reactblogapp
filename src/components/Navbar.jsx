@@ -8,6 +8,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import woswos from '../assets/woswos.png';
+
 
 export default function Navbar() {
   
@@ -33,10 +35,10 @@ export default function Navbar() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <img src={woswos} alt='logo' className='logo' width={50} />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Photos
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+            April's Blog
           </Typography>
           
             <div>
@@ -48,7 +50,7 @@ export default function Navbar() {
                 onClick={handleMenu}
                 color="inherit"
               >
-                <AccountCircle />
+                <AccountCircle style={{fontSize: '30px'}}/>
               </IconButton>
               <Menu
                 id="menu-appbar"
@@ -65,8 +67,8 @@ export default function Navbar() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={handleClose}>Login</MenuItem>
+                <MenuItem onClick={handleClose}>Register</MenuItem>
               </Menu>
             </div>
           
