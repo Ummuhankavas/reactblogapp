@@ -1,19 +1,19 @@
-import {useContext,createContext} from 'react'
+import {useContext,createContext} from 'react';
+import {auth, googleProvider } from '../utils/firebase';
 
 //!Create context for authentication data
 const AuthContext = createContext();
 
 //!Define a function to get data from Auth context
-function useAuth(){
+export function useAuth(){
     return useContext(AuthContext);
 }
 
 const AuthContextProvider = () => {
-  return (
-    <div>
-
-    </div>
-  )
+  const {currentUser, setCurrentUser} = useState()
+    function signup()
+  return 
+    
 }
 
 export default AuthContextProvider;
