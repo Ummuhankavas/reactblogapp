@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 // import { useContext } from 'react';
 import { useState } from 'react';
 import { createContext } from 'react';
-import { userObserver } from '../auth/firebase';
+import { userObserver } from '../utils/firebase';
 
 export const AuthContext = createContext();
 //* with custom hook
@@ -19,9 +19,9 @@ const AuthContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ currentUser }}>
+    <AuthContextProvider value={{ currentUser }}>
       {children}
-    </AuthContext.Provider>
+    </AuthContextProvider>
   );
 };
 

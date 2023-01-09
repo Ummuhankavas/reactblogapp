@@ -1,9 +1,9 @@
 import { initializeApp } from "firebase/app";
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { toastErrorNotify, toastSuccessNotify, } from "./toastNotify";
+// import { toastErrorNotify, toastSuccessNotify, } from "./toastNotify";
 import { getDatabase, onValue, push, ref, remove, set, update } from "firebase/database";
 import { useEffect, useState } from "react";
-import { Toastify } from "toastify";
+// import { Toastify } from "toastify";
 
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
@@ -76,13 +76,13 @@ export const userObserver = (setCurrentUser) => {
           console.log(result);
           navigate("/");
   
-          toastSuccessNotify("Logged in successfully!");
+          // toastSuccessNotify("Logged in successfully!");
         })
         .catch((error) => {
-          toastErrorNotify(error);
+          // toastErrorNotify(error);
         });
     } catch (error) {
-      toastErrorNotify(error.message);
+      // toastErrorNotify(error.message);
     }
   };
 
@@ -118,7 +118,7 @@ export const userObserver = (setCurrentUser) => {
       } ${new Date().getDate()} , ${new Date().getFullYear()}`,
       email : currentUser.email
     });
-    Toastify("THE ITEM HAS ADDED! ✅")
+    // Toastify("THE ITEM HAS ADDED! ✅")
   };
   
   export const useFetch = () => {
@@ -144,13 +144,13 @@ export const userObserver = (setCurrentUser) => {
   export const DeleteItem = (id) => {
     const database = getDatabase();
     remove(ref(database, "users/" + id))
-    Toastify("THE ITEM HAS DELETED! ✅")
+    // Toastify("THE ITEM HAS DELETED! ✅")
   }
   export const editItem1 = (initialValues) => {
     const database = getDatabase();
     const updates = {};
     updates["users/"+initialValues.id] = initialValues;
-    Toastify("THE ITEM HAS UPDATED! ✅")
+    // Toastify("THE ITEM HAS UPDATED! ✅")
   
     return update(ref(database), updates)
   }

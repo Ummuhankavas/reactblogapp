@@ -4,16 +4,21 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+// import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import woswos from '../assets/woswos.png';
+import useAuth from '../context/AuthContextProvider';
+import { Link } from "react-router-dom";
 
 
 export default function Navbar() {
   
   const [anchorEl, setAnchorEl] = React.useState(null);
+  
+
+  const {currentUser} = useAuth();
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -52,6 +57,33 @@ export default function Navbar() {
               >
                 <AccountCircle style={{fontSize: '30px'}}/>
               </IconButton>
+              {currentUser?.email ? (<Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <Link to= '/login' >
+                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                </Link>
+                <Link to= '/new-blog' >
+                <MenuItem onClick={handleClose}>New Blog</MenuItem>
+                </Link>
+                <Link to= '/profile' >
+                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                </Link>
+                
+               
+              </Menu>):( 
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorEl}
@@ -67,9 +99,16 @@ export default function Navbar() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
+                <Link to= '/login'>
                 <MenuItem onClick={handleClose}>Login</MenuItem>
+                </Link>
+                <Link to= '/register' >
                 <MenuItem onClick={handleClose}>Register</MenuItem>
-              </Menu>
+                </Link>
+                
+               
+              </Menu>)}
+             
             </div>
           
         </Toolbar>
