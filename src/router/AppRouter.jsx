@@ -1,21 +1,29 @@
-import React from 'react';
-import { Route, Router, Switch } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import PrivateRouter from './PrivateRouter';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import PrivateRouter from "./PrivateRouter";
+import Dashboard from "../pages/Dashboard";
+import Details from "../pages/Detail";
+import UpdateBlog from "../pages/UpdateBlog";
+import Login from "../pages/Login";
+import NewBlog from "../pages/NewBlog";
+import Profile from "../pages/Profile";
+import Register from "../pages/Register";
+import About from "../pages/About";
+const AppRouter = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/details/:id" element={<PrivateRouter />}>
+        <Route path="" element={<Details />} />
+      </Route>
+      <Route path="/login" element={<Login />} />
+      <Route path="/newblog" element={<NewBlog />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/update/:id" element={<UpdateBlog />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
+  );
+};
 
-export const AppRouter = () => {
-  return 
-  <Router>
-    <Navbar/>
-    <Switch>
-        <Route path='/login' component={Login}/>
-        <Route path='/register' component={Register}/>
-        <Route path='/' component={Dashboard}/>
-
-        <PrivateRouter path='/profile' component={Profile}/>
-        <PrivateRouter path='/new-blog' component={NewBlog}/>
-        <PrivateRouter path='/update-blog' component={UpdateBlog}/>
-        <PrivateRouter path='/detail' component={Detail}/>
-    </Switch>
-  </Router>
-}
+export default AppRouter;
