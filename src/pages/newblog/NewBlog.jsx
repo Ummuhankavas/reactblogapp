@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { toastSuccessNotify } from "../../helpers/toastNotify";
 import NewStyled, { Btn, Input, Input2, Signin } from "./NewStyled";
-import Pic from "../../assets/mm.png";
+import woswos from "../../assets/woswos.png";
 import { AuthContext } from "../../contexts/AuthContext";
 import { AddUser } from "../../contexts/BlogContext";
 import { useNavigate } from "react-router-dom";
@@ -40,7 +40,7 @@ const NewBlog = () => {
   return (
     <NewStyled>
       <Signin>
-        <img src={Pic} width="100" alt="pic" />
+        <img src={woswos} width="100" alt="pic" />
         <h1>--New Blog--</h1>
         <form onSubmit={handleSubmit}>
           <Input

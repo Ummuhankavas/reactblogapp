@@ -10,8 +10,8 @@ import NavStyled, {
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsPersonCircle } from "react-icons/bs";
-import Pic from "../../assets/mm.png";
-import { AuthContext } from "../../contexts/AuthContext";
+import { AuthContext } from "../contexts/AuthContext";
+import woswos from "../../src/assets/woswos.png";
 
 function Nav() {
   const { currentUser } = useContext(AuthContext);
@@ -20,10 +20,10 @@ function Nav() {
 
   return (
     <NavStyled>
-      <NavImg src={Pic} alt="" onClick={() => navigate("/home")} />
+      <NavImg src={woswos} alt="" onClick={() => navigate("/home")} />
 
       <NavbarLink style={{ fontSize: "1.5rem", color: "white" }} to="/">
-        ----MMEHEL--- BLOG
+        ----APRIL'S--- BLOG
       </NavbarLink>
 
       <RightDiv>

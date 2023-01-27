@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import UpdateStyled, { Btn, Input, Input2, Signin } from "./UpdateStyled";
-import Pic from "../../assets/mm.png";
+import woswos from "../../assets/woswos.png";
 import { useLocation, useNavigate } from "react-router-dom";
 import { UpdateUser } from "../../contexts/BlogContext";
 import { toastSuccessNotify } from "../../helpers/toastNotify";
@@ -35,7 +35,7 @@ const UpdateBlog = () => {
   return (
     <UpdateStyled>
       <Signin>
-        <img src={Pic} width="100" />
+        <img src={woswos} alt='logo' width="100" />
         <h1>--Update Blog--</h1>
         <form onSubmit={() => handleUpdate(contact)}>
           <Input

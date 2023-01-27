@@ -68,7 +68,7 @@ export const userObserver = (setCurrentUser) => {
   };
 
 
-  export const signUpGoogle = async (navigate) => {
+  export const signUpWithGoogle = async (navigate) => {
     try {
       const provider = new GoogleAuthProvider();
       signInWithPopup(auth, provider)
@@ -156,3 +156,4 @@ export const userObserver = (setCurrentUser) => {
   }
 
 
+export default app;
