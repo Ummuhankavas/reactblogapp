@@ -22,8 +22,8 @@ function Nav() {
     <NavStyled>
       <NavImg src={logo} alt="logo" onClick={() => navigate("/home")} />
 
-      <NavbarLink style={{ fontSize: "1.5rem", color: "white" }} to="/">
-        ----APRIL'S--- BLOG
+      <NavbarLink style={{ fontSize: "2rem", fontWeight:'bold', color: "white" }} to="/">
+        APRIL'S BLOG
       </NavbarLink>
 
       <RightDiv>

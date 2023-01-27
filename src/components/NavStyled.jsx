@@ -29,6 +29,7 @@ export const NavbarLinkp = styled.p`
 export const NavImg = styled.img`
   width: 3rem;
   padding: 1rem;
+  border-radius: 50px;
 `;
 export const RightDiv = styled.div`
   display: flex;
