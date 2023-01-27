@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import { logOut } from "../../helpers/firebase";
+import { logOut } from "../helpers/firebase";
 import NavStyled, {
   NavbarLink,
   NavImg,
   MenuDiv,
   RightDiv,
   NavbarLinkp,
-} from "./NavStyled.js";
+} from "./NavStyled";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsPersonCircle } from "react-icons/bs";
