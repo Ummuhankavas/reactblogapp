@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 // import { useContext } from 'react';
 import { useState } from 'react';
 import { createContext } from 'react';
-import { userObserver } from '../utils/firebase';
+import { userObserver } from '../helpers/firebase';
 
 export const AuthContext = createContext();
 

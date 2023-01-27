@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
-import { logOut } from "../utils/firebase";
+import { logOut } from "../../helpers/firebase";
 import NavStyled, {
   NavbarLink,
   NavImg,
   MenuDiv,
   RightDiv,
   NavbarLinkp,
-} from "./NavStyled.jsx";
+} from "./NavStyled.js";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BsPersonCircle } from "react-icons/bs";
-import woswos from "../assets/woswos.png";
-import { AuthContext } from "../context/AuthContextProvider";
+import Pic from "../../assets/mm.png";
+import { AuthContext } from "../../contexts/AuthContext";
 
 function Nav() {
   const { currentUser } = useContext(AuthContext);
@@ -20,10 +20,10 @@ function Nav() {
 
   return (
     <NavStyled>
-      <NavImg src={woswos} alt="" onClick={() => navigate("/dashboard")} />
+      <NavImg src={Pic} alt="" onClick={() => navigate("/home")} />
 
       <NavbarLink style={{ fontSize: "1.5rem", color: "white" }} to="/">
-        April's Blog
+        ----MMEHEL--- BLOG
       </NavbarLink>
 
       <RightDiv>

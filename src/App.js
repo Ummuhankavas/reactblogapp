@@ -1,9 +1,8 @@
-
-import AppRouter from './router/AppRouter';
+import AppRouter from "./app-router/AppRouter";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { ThemeProvider } from "styled-components";
-import AuthContextProvider from "./context/AuthContextProvider";
+import { AuthContextProvider} from './contexts/AuthContext';
 import { ToastContainer } from "react-toastify";
 const style = {
   colors: {

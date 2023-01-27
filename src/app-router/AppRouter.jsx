@@ -1,14 +1,14 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import PrivateRouter from "./PrivateRouter";
-import Dashboard from "../pages/Dashboard";
-import Details from "../pages/Detail";
-import UpdateBlog from "../pages/UpdateBlog";
-import Login from "../pages/Login";
-import NewBlog from "../pages/NewBlog";
-import Profile from "../pages/Profile";
-import Register from "../pages/Register";
-import About from "../pages/About";
+import Dashboard from "../pages/dashboard/Dashboard";
+import Details from "../pages/details/Details";
+import UpdateBlog from "../pages/updateblog/UpdateBlog";
+import Login from "../pages/login/Login";
+import NewBlog from "../pages/newblog/NewBlog";
+import Profile from "../pages/profile/Profile";
+import Register from "../pages/register/Register";
+import About from "../pages/about/About";
 const AppRouter = () => {
   return (
     <Routes>
