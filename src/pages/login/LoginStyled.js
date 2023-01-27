@@ -4,7 +4,7 @@ const LoginStyled = styled.div`
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("https://source.unsplash.com/FrSEEdYr418");
+  background-image: url("https://picsum.photos/800/900");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

@@ -1,6 +1,6 @@
 import AppRouter from "./app-router/AppRouter";
 import "./App.css";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import { ThemeProvider } from "styled-components";
 import AuthContextProvider from "./contexts/AuthContext";
 import { ToastContainer } from "react-toastify";
@@ -19,7 +19,6 @@ function App() {
     <div className="App">
       <AuthContextProvider>
         <ThemeProvider theme={style}>
-          <Navbar />
           <AppRouter />
           <ToastContainer />
         </ThemeProvider>
