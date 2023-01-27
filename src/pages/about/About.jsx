@@ -10,13 +10,13 @@ const About = () => {
         <Aboutdiv>
           <h4 style={{ textAlign: "center" }}>About Software Developer</h4>
 
-          <AboutLi>I'm Mustafa.</AboutLi>
+          <AboutLi>I'm Ümmühan Kavas.</AboutLi>
           <AboutLi>
             I'm currently learning Full-Stack Development Languages.
           </AboutLi>
           <AboutLi>I've already known JS,ReactJS,ReactNative</AboutLi>
           <AboutLi>I also enjoy digging into challenge code.</AboutLi>
-          <AboutLi>Send email mehelx5207@gmail.com</AboutLi>
+          <AboutLi>Send email: ummuhankavas@gmail.com</AboutLi>
         </Aboutdiv>
       </AboutStyled>
     </>
