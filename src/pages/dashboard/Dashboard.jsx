@@ -10,7 +10,7 @@ import { BsPersonCircle } from "react-icons/bs";
 import { AiFillHeart } from "react-icons/ai";
 import { BiComment } from "react-icons/bi";
 import { AuthContext } from "../../contexts/AuthContext";
-import { toastWarnNotify } from "../../helpers/toastNotify";
+// import { toastWarnNotify } from "../../helpers/toastNotify";
 
 import { useFetch } from "../../contexts/BlogContext";
 const Dashboard = () => {
@@ -28,7 +28,8 @@ const Dashboard = () => {
             key={blog?.id}
             onClick={() => {
               navigate("details/" + blog?.id, { state: blog });
-              !currentUser && toastWarnNotify("Please log in to see detail");
+              !currentUser && navigate("/login");
+              // toastWarnNotify("Please log in to see detail")
             }}
           >
             <Image src={blog?.url} alt="" />
