@@ -3,7 +3,7 @@ import UpdateStyled, { Btn, Input, Input2, Signin } from "./UpdateStyled";
 import logo from "../../assets/ummulogo.jpg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { UpdateUser } from "../../contexts/BlogContext";
-import { toastSuccessNotify } from "../../helpers/toastNotify";
+// import { toastSuccessNotify } from "../../helpers/toastNotify";
 const UpdateBlog = () => {
   const navigate = useNavigate();
   const { state: det } = useLocation();
@@ -29,7 +29,7 @@ const UpdateBlog = () => {
   const handleUpdate = (det) => {
     UpdateUser(det);
     navigate("/");
-    toastSuccessNotify("Updated succesfully!");
+    // toastSuccessNotify("Updated succesfully!");
   };
   console.log(contact);
   return (
