@@ -21,14 +21,14 @@ const Dashboard = () => {
   console.log(blogList);
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>---DASHBOARD---</h1>
+      <h1 style={{ textAlign: "center" }}>DASHBOARD</h1>
       <DashboardStyled>
         {blogList.map((blog) => (
           <Blogdiv
             key={blog?.id}
             onClick={() => {
               navigate("details/" + blog?.id, { state: blog });
-              !currentUser && toastWarnNotify("please log in to see detail");
+              !currentUser && toastWarnNotify("Please log in to see detail");
             }}
           >
             <Image src={blog?.url} alt="" />
