@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { toastSuccessNotify } from "../../helpers/toastNotify";
+// import { toastSuccessNotify } from "../../helpers/toastNotify";
 import NewStyled, { Btn, Input, Input2, Signin } from "./NewStyled";
 import logo from "../../assets/ummulogo.jpg";
 import { AuthContext } from "../../contexts/AuthContext";
@@ -35,7 +35,7 @@ const NewBlog = () => {
     AddUser(blog);
     setBlog({ title: "", url: "", content: "" });
     navigate("/");
-    toastSuccessNotify("Blog was added successfully!");
+    // toastSuccessNotify("Blog was added successfully!");
   };
   return (
     <NewStyled>
