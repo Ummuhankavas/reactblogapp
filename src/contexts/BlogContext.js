@@ -10,7 +10,7 @@ import {
   set,
   update,
 } from "firebase/database";
-import { toastWarnNotify } from "../helpers/toastNotify";
+// import { toastWarnNotify } from "../helpers/toastNotify";
 
 export const AddUser = (blog) => {
   const db = getDatabase(firebase);
@@ -41,7 +41,7 @@ export const DeleteUser = (id) => {
   const db = getDatabase(firebase);
   // const userRef=ref(db,"user/")
   remove(ref(db, "blog/" + id));
-  toastWarnNotify("Blog Deleted");
+  // toastWarnNotify("Blog Deleted");
 };
 
 export const UpdateUser = (det) => {
